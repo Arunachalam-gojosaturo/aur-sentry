@@ -5,23 +5,26 @@
 <div align="center">
 
 # 🛡️ AUR-SENTRY
-### *Next-Gen AI Security Sentinel & Cyberpunk Terminal Visualizer for Arch Linux*
+### *The First AI-Based Pacman Security Agent & Animated Cyber Visualizer for Arch Linux*
 
+[![AUR version](https://img.shields.io/aur/version/aur-sentry?color=1793D1&label=AUR%20Package&logo=arch-linux&style=for-the-badge)](https://aur.archlinux.org/packages/aur-sentry)
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-Security%20Agent-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org)
 [![Google Gemini 3.6 Flash](https://img.shields.io/badge/Google%20Gemini-3.6%20Flash%20AI-4285F4?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![Bash Script](https://img.shields.io/badge/Shell-Bash%205.0%2B-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![Maintainer](https://img.shields.io/badge/Maintainer-Arunachalam-FF6F00?style=for-the-badge&logo=archlinux)](https://aur.archlinux.org/account/arunachalam)
 [![License: MIT](https://img.shields.io/badge/License-MIT-F58025?style=for-the-badge)](LICENSE)
-[![Status: Active](https://img.shields.io/badge/Status-Production%20Ready-00E676?style=for-the-badge)]()
 
 <br/>
 
-[Key Features](#-key-features) •
-[Architecture](#-architecture) •
-[Quick Start](#-quick-start) •
-[Gemini AI Setup](#-google-gemini-ai-configuration) •
-[CLI Usage](#-cli-usage--commands) •
-[Pacman Integration](#-pacman-integration) •
-[Test Suite](#-test-suite)
+**[AUR Package](https://aur.archlinux.org/packages/aur-sentry)** •
+**[Maintainer Profile](https://aur.archlinux.org/account/arunachalam)** •
+**[Key Features](#-key-features)** •
+**[Architecture](#-architecture)** •
+**[Installation](#-installation)** •
+**[Gemini AI Setup](#-google-gemini-ai-configuration)** •
+**[CLI Usage](#-cli-usage--commands)** •
+**[Pacman Integration](#-pacman-integration)** •
+**[Test Suite](#-test-suite)**
 
 </div>
 
@@ -29,9 +32,9 @@
 
 ## 🌌 Overview
 
-**AUR-Sentry** is an ultra-low latency command-line security agent and animated cyber visualizer engineered specifically for **Arch Linux**, **Pacman**, and the **Arch User Repository (AUR)**. 
+**Arunachalam's AUR-Sentry** is an ultra-low latency command-line security agent and animated cyber visualizer engineered specifically for **Arch Linux**, **Pacman**, and the **Arch User Repository (AUR)**. Developed by a 7-year veteran builder based in **Tamil Nadu, India**.
 
-Powered by **Google Gemini 3.6 Flash** and an offline heuristic fallback matrix, **AUR-Sentry** performs real-time threat intelligence scans on incoming packages before they are written to disk. It detects and quarantines supply-chain trojans, typosquatted packages, backdoor `systemd` persistence hooks, and token grabbers — all while providing an immersive cyberpunk download interface.
+As the **first AI-based pacman installer security system for Arch Linux**, **AUR-Sentry** combines real-time threat intelligence powered by **Google Gemini 3.6 Flash** with a high-performance terminal visualizer. It intercepts and evaluates incoming packages before they touch system memory or disk, eliminating supply-chain attacks, typosquatted clones, backdoor `systemd` persistence hooks, token grabbers, and malicious maintainer takeovers.
 
 ---
 
@@ -39,13 +42,13 @@ Powered by **Google Gemini 3.6 Flash** and an offline heuristic fallback matrix,
 
 | Feature | Description |
 | :--- | :--- |
-| 🧠 **Neural AI Threat Intelligence** | Direct integration with **Google Gemini 3.6 Flash** for instantaneous threat classification (`[SAFE]` vs `[DANGER]`). |
-| 🚨 **Supply-Chain & Typosquatting Defense** | Intercepts *Atomic Arch* trojans, *Chaos RAT* vectors, orphaned maintainer account hijackings, and homoglyph exploits. |
-| ⚡ **Cyber Stream Visualizer** | High-precision animated progress gauges, glowing gradient meters, dynamic spinners, and real-time transfer telemetry. |
-| 🔁 **Smart Session Caching** | Detects active terminal sessions to display the ASCII boot banner only once during multi-package operations (`pacman -Syu`). |
-| 🔒 **Resilient Signature Handling** | Handles missing `.sig` files (HTTP 404) gracefully with zero corrupt temporary files left on disk. |
-| 📴 **Offline Heuristic Matrix** | Automatic failover to local heuristic pattern-matching engine if offline or if cloud API limits are hit. |
-| 🛠️ **Native Pacman `XferCommand` Hook** | Seamlessly drops into `/etc/pacman.conf` without modifying Pacman binaries or breaking pacman hooks. |
+| 🧠 **Neural AI Threat Intelligence** | Direct real-time classification using **Google Gemini 3.6 Flash** (`[SAFE]` vs `[DANGER]`). |
+| 🚨 **Supply-Chain & Typosquatting Shield** | Stops *Atomic Arch* trojans, *Chaos RAT* vectors, orphaned maintainer account takeovers, and homoglyph exploits. |
+| ⚡ **Cyber Stream Visualizer** | High-precision animated progress meters, glowing gradient gauges, dynamic spinners, and real-time telemetry. |
+| 🔁 **Smart Session Caching** | Suppresses redundant startup animations on sequential downloads during batch `pacman -Syu` operations. |
+| 🔒 **404 Signature Resiliency** | Handles missing `.sig` files cleanly without creating corrupted zero-byte files on disk. |
+| 📴 **Dual-Engine Failover** | Instant offline fallback to a local heuristic threat matrix if internet connectivity or API quota drops. |
+| 🛠️ **Seamless Pacman `XferCommand` Hook** | Native integration via `/etc/pacman.conf` without patching Pacman binaries. |
 
 ---
 
@@ -53,60 +56,71 @@ Powered by **Google Gemini 3.6 Flash** and an offline heuristic fallback matrix,
 
 ```mermaid
 flowchart TD
-    A[Pacman / AUR Helper] -->|XferCommand| B[AUR-Sentry Gateway]
-    B --> C{API Key Configured?}
+    A["📦 Pacman / AUR Helper (yay, paru)"] -->|"XferCommand"| B["🛡️ AUR-Sentry Gateway"]
+    B --> C{"API Key Configured?"}
     
-    C -->|Yes| D[Google Gemini 3.6 Flash Neural Core]
-    C -->|No / Offline| E[Local Heuristic Threat Matrix]
+    C -->|"Yes (Live Cloud)"| D["🧠 Google Gemini 3.6 Flash Neural Core"]
+    C -->|"No / Offline"| E["⚙️ Local Heuristic Threat Matrix"]
     
-    D --> F{Verdict Evaluation}
+    D --> F{"Verdict Evaluation"}
     E --> F
     
-    F -->|DANGER Detected| G[🚨 ABORT & QUARANTINE]
-    G -->|Block Execution| H[Alert System & Exit Code 1]
+    F -->|"🚨 DANGER Detected"| G["⛔ ABORT & QUARANTINE"]
+    G -->|"Block Execution"| H["Alert System & Exit Code 1"]
     
-    F -->|SAFE Clearance| I[⚡ Cyber Stream Visualizer]
-    I --> J[Stream Acquisition & SHA-256 Checksum]
-    J --> K[Write Verified Package to Disk]
+    F -->|"🛡️ SAFE Clearance"| I["⚡ Cyber Stream Visualizer"]
+    I --> J["Stream Acquisition & SHA-256 Checksum"]
+    J --> K["Write Verified Package to Disk"]
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Installation
 
-### 1. Clone the Repository
+### Option 1: Install from AUR (Recommended)
+
+Using **`yay`**:
+```bash
+yay -S aur-sentry
+```
+
+Using **`paru`**:
+```bash
+paru -S aur-sentry
+```
+
+Manual AUR build:
+```bash
+git clone https://aur.archlinux.org/aur-sentry.git
+cd aur-sentry
+makepkg -si
+```
+
+---
+
+### Option 2: Install from Source (GitHub)
+
 ```bash
 git clone https://github.com/Arunachalam-gojosaturo/aur-sentry.git
 cd aur-sentry
-```
-
-### 2. Automated Installation
-Run the installer with root privileges to configure `/etc/pacman.conf` and link binaries to `/usr/local/bin/`:
-```bash
 sudo ./install.sh
-```
-
-### 3. Verify the Installation
-Run the complete automated 6-step test suite:
-```bash
-./test.sh
 ```
 
 ---
 
 ## 🔑 Google Gemini AI Configuration
 
-AUR-Sentry leverages **Google Gemini 3.6 Flash** for neural package analysis.
+AUR-Sentry uses **Google Gemini 3.6 Flash** for neural package security analysis.
 
 ### Set Your API Key:
 ```bash
-# Save securely in ~/.config/aur-sentry/api_key (chmod 600)
+# Save securely to ~/.config/aur-sentry/api_key (mode 600)
 aur-sentry --set-key "AIzaSyYourGeminiApiKeyHere..."
 ```
 
 ### Manage API Key:
 ```bash
-# Check current API key status
+# Display active API key status (masked)
 aur-sentry --show-key
 
 # Remove saved API key
@@ -117,33 +131,31 @@ aur-sentry --clear-key
 > You can also supply the API key via environment variable:
 > ```bash
 > export GEMINI_API_KEY="AIzaSyYourGeminiApiKeyHere..."
-> export GEMINI_MODEL="gemini-3.6-flash" # Optional
+> export GEMINI_MODEL="gemini-3.6-flash" # Optional (Default: gemini-3.6-flash)
 > ```
 
 ---
 
 ## 💻 CLI Usage & Commands
 
-AUR-Sentry can be invoked directly as a standalone security scanner or as a replacement download accelerator.
-
 ```
 Usage: aur-sentry [OPTIONS] <URL_OR_PACKAGE_NAME>
 
 Options:
-  --scan-only            Perform AI security scan without initiating download
+  --scan-only            Perform AI security scan without downloading
   --set-key <KEY>        Save Google Gemini API key securely
-  --show-key             Display active API key status (masked)
+  --show-key             Display active API key status
   --clear-key            Remove saved Gemini API key
   --banner, --art        Force display of ASCII startup art
   -o, --output <path>    Specify destination output file path
   -h, --help             Show help documentation
 
 Environment Variables:
-  GEMINI_API_KEY         Provide Gemini API key directly via shell
+  GEMINI_API_KEY         Set Gemini API key via environment
   GEMINI_MODEL           Override AI model (Default: gemini-3.6-flash)
 ```
 
-### Examples:
+### Interactive Examples:
 
 #### 🔍 Scan an Official Package:
 ```bash
@@ -167,7 +179,7 @@ aur-sentry "neovim" --scan-only
 [SAFE] Official Neovim text editor distribution with verified maintainer cryptographic provenance.
 ```
 
-#### 🚨 Intercept a Malicious Typosquatted Package:
+#### 🚨 Intercept a Malicious Typosquatted Threat:
 ```bash
 aur-sentry "firefox-patch-bin" --scan-only
 ```
@@ -182,40 +194,41 @@ aur-sentry "firefox-patch-bin" --scan-only
 
 ## ⚙️ Pacman Integration
 
-`install.sh` automatically updates `/etc/pacman.conf` with optimized visual and security parameters:
+To route all pacman package transfers through AUR-Sentry visualizers or the AI shield, configure `/etc/pacman.conf`:
 
 ```ini
 [options]
 Color
 ILoveCandy
 CheckSpace
-XferCommand = /usr/local/bin/arcxos-dl %u -o %o
-# ParallelDownloads = 5 (Disabled for high-precision sequential stream visualization)
-```
+# Fast Cyberpunk Visualizer:
+XferCommand = /usr/bin/arcxos-dl %u -o %o
 
-To use the full AI-Sentry engine directly inside pacman:
-```ini
-XferCommand = /usr/local/bin/aur-sentry %u -o %o
+# OR Full AI Neural Threat Interceptor:
+# XferCommand = /usr/bin/aur-sentry %u -o %o
+
+# Sequential download stream for animated visualizer:
+# ParallelDownloads = 5
 ```
 
 ---
 
 ## 🧪 Test Suite
 
-Run the built-in test suite to validate all 6 core submodules:
+Run the built-in 6-phase test suite to verify all subsystem components:
 
 ```bash
 ./test.sh
 ```
 
-| Test Case | Target | Expected Result |
+| Phase | Subsystem | Verification |
 | :--- | :--- | :--- |
 | `TEST 1` | ASCII Boot Sequence | Art renders on fresh session |
-| `TEST 2` | Session Caching | Art suppressed during sequential transfers |
-| `TEST 3` | Safe Package Scan | Returns `[SAFE]` clearance |
+| `TEST 2` | Session Caching | Banner suppressed during continuous batch transfers |
+| `TEST 3` | Official Package Scan | Returns `[SAFE]` clearance |
 | `TEST 4` | Typosquat Detection | Returns `[DANGER]` and blocks download |
-| `TEST 5` | Supply-Chain Trojan | Returns `[DANGER]` for backdoor hooks |
-| `TEST 6` | Missing 404 `.sig` | Clean exit with zero disk artifacts |
+| `TEST 5` | Supply-Chain Trojan | Returns `[DANGER]` for unauthorized systemd backdoors |
+| `TEST 6` | 404 Missing Signature | Clean exit with zero disk contamination |
 
 ---
 
@@ -223,15 +236,19 @@ Run the built-in test suite to validate all 6 core submodules:
 
 ```
 aur-sentry/
-├── banner.jpeg         # Repository header banner graphic
+├── banner.jpeg         # Header banner graphic
+├── PKGBUILD            # Arch Linux / AUR package build recipe
+├── .SRCINFO            # Generated AUR package metadata
+├── aur-sentry.install  # Post-install hooks & helpful guide
 ├── aur-sentry          # Core Gemini AI security agent & visualizer
 ├── arcxos-dl           # High-performance animated pacman downloader
-├── arcxos-hyper-dl     # Hyper-stream variant with extended telemetry
+├── arcxos-hyper-dl     # Hyper-stream telemetry downloader
 ├── hyperdl.sh          # Session-cached transfer utility
 ├── pacman.conf         # Pre-configured Arch Linux pacman configuration
-├── install.sh          # Automated system installer & backup tool
+├── install.sh          # Standalone system installer & backup tool
 ├── uninstall.sh        # Complete uninstaller & configuration restorer
-├── test.sh             # Comprehensive 6-step test & evaluation suite
+├── test.sh             # Comprehensive 6-step test suite
+├── LICENSE             # MIT License
 └── README.md           # Documentation & user guide
 ```
 
@@ -239,20 +256,24 @@ aur-sentry/
 
 ## 🗑️ Uninstallation
 
-To restore your original `/etc/pacman.conf` and remove all binaries from `/usr/local/bin`:
-
 ```bash
+# If installed via yay/pacman:
+sudo pacman -R aur-sentry
+
+# If installed via install.sh:
 sudo ./uninstall.sh
 ```
 
 ---
 
-## 📜 License
+## 👤 Author & Maintainer
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+- **Arunachalam** (Veteran Builder, Tamil Nadu, India)
+- **AUR Account**: [https://aur.archlinux.org/account/arunachalam](https://aur.archlinux.org/account/arunachalam)
+- **GitHub**: [@Arunachalam-gojosaturo](https://github.com/Arunachalam-gojosaturo)
 
 ---
 
-<div align="center">
-  <sub>Developed by <a href="https://github.com/Arunachalam-gojosaturo">Arunachalam</a> • Powered by Google Gemini AI & Arch Linux</sub>
-</div>
+## 📜 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
