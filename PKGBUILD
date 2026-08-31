@@ -13,7 +13,7 @@ optdepends=(
 )
 install=aur-sentry.install
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('cd2e5013dedff7e6e4d17519f90a78800ffc4d372275a70f8c9483685b788775')
 
 package() {
     cd "$srcdir/$pkgname-$pkgver"
