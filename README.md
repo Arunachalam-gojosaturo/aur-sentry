@@ -5,7 +5,7 @@
 <div align="center">
 
 # 🛡️ AUR-SENTRY
-### *The First AI-Based Pacman Security Agent & Animated Cyber Visualizer for Arch Linux*
+### *First AI-based pacman security agent and animated cyber visualizer for Arch Linux, developed by Arunachalam*
 
 [![AUR version](https://img.shields.io/aur/version/aur-sentry?color=1793D1&label=AUR%20Package&logo=arch-linux&style=for-the-badge)](https://aur.archlinux.org/packages/aur-sentry)
 [![Arch Linux](https://img.shields.io/badge/Arch%20Linux-Security%20Agent-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org)
